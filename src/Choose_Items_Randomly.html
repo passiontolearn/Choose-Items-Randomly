@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</head>
+	
+<body>
+<!-- Use this to reverse Last and First name
+********************************************
+     http://regexr.com/3ejo4
+******************************************** -->
+<textarea rows="17" id="yood7">
+Mark John
+Elizabeth Marshall
+Michelle Bee
+Howard Smith
+Beth Green
+Ricky King
+Emma Jefferson
+Harold	Freeman
+Noah Harper
+שלום עליכם
+ניסים רימון
+</textarea>
+
+<script type="text/javascript">
+var itemsArray = document.getElementById('yood7').value.match(/.+/g);
+var randomItems = _.sample(itemsArray, 6);   // _.sample()  REQUIRES Underscore.js 
+
+alert(randomItems.join('\n'));
+
+/* 
+Thanks to:
+http://stackoverflow.com/a/5551235/3404746
+http://stackoverflow.com/questions/2299604/javascript-convert-textarea-into-an-array
+http://stackoverflow.com/questions/40270498/jsfiddle-embed-script-usage
+*/
+</script>
+	
+</body>
+</html>
